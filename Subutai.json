@@ -1,0 +1,53 @@
+{
+  "name": "${environmentName}",
+  "description": "test",
+  "version": "1.0.0",
+  "author": "https://github.com/absidish",
+  "containers": [
+    {
+      "hostname": "db",
+      "template": "debian-stretch@f9d6a36b3e9b1d985008e482680f2ddf584d98bd",
+      "peer-criteria": "gr1",
+      "size": "${dbtype}",
+      "peer-layout": "d1"
+    }
+  ],
+  "peer-layouts": [
+    {
+      "name": "d1",
+      "peer-count": "1",
+      "container-per-peer": "1"
+    }
+  ],
+  "peer-criteria": [
+    {
+      "name": "gr1"
+    }
+  ],
+  "user-variables": {
+    "environmentName": {
+      "description": "Enter the environment name",
+      "type": "string",
+      "default": "wp",
+      "validation": "[a-zA-Z0-9]+"
+    },
+    "peerCount": {
+      "description": "peer count",
+      "type": "int",
+      "default": "3",
+      "validation": "\\d+"
+    },
+    "dbtype": {
+      "description": "You can set TINY,SMALL,MEDIUM,LARGE,HUGE",
+      "type": "enum",
+      "default": "SMALL",
+      "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
+    },
+    "webtype": {
+      "description": "You can set TINY,SMALL,MEDIUM,LARGE,HUGE",
+      "type": "enum",
+      "default": "SMALL",
+      "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
+    }
+  }
+}
