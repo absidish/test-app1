@@ -6,7 +6,7 @@
   "containers": [
     {
       "hostname": "db",
-      "template": "debian-stretch@f9d6a36b3e9b1d985008e482680f2ddf584d98bd",
+      "template": "debian-stretch",
       "peer-criteria": "gr1",
       "size": "${dbtype}",
       "peer-layout": "d1"
