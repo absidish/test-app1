@@ -6,7 +6,7 @@
     "containers": [
         {
             "hostname": "${webContainerName}",
-            "template": "debian-stretch-python3",
+            "template": "debian-stretch-python3@sydyk188",
             "peer-criteria": "HTTP-GROUP",
             "size": "${containerSize}"
         }
