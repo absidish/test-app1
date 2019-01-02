@@ -7,7 +7,7 @@
      upgrade: yes
      update_cache: yes
      
-  - name: install nginx
+  - name: install python3
     package:
      name: python3
      state: present
