@@ -28,6 +28,7 @@
         "groups": [
             {
                 "name": "wp",
+                "python-interpreter": "/usr/bin/python3",
                 "hostnames": [
                     "${webContainerName}"
                 ]
